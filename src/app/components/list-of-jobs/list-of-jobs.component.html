@@ -1,0 +1,11 @@
+<body>
+    <app-filter-job (filterChange)="filterChange2($event)"></app-filter-job>
+    <br> <br>
+    <div class="jobs">
+        <div class="job" *ngFor="let j of jobs">
+            <app-job [jo]=j></app-job>
+        </div>
+    </div>
+</body>
+<br>
+<a class="toHome" [routerLink]="''">HomePage</a>

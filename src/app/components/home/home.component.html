@@ -1,0 +1,16 @@
+<header>
+    <a [routerLink]="'/Login'"><img class="imghome" src="../../../assets/q.jpg"></a>
+    <h3 class="hello">Hello</h3>
+    <div *ngIf="user!=null" class="details">
+        <h3>{{user["name"]}}</h3>
+        <a class="domain" [routerLink]="'/listOfJobs/'+x">{{user["domain"]}}</a>
+    </div>
+    <h3 class="countOfCV">countOfCV : {{countCv}}</h3>
+    <a class="listOfJobs" [routerLink]="'/listOfJobs/'">listOfJobs</a>
+</header>
+<div class="body">
+    <div class="between">Jobs</div>
+    <h3>The list of jobs to which you have sent cv: </h3>
+    <div *ngFor="let j of jobSendCv">{{j}}</div>
+</div>
+<app-manager></app-manager>

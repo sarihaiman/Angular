@@ -1,0 +1,16 @@
+<div class="body">
+    <h2>log-in</h2>
+    <form ngForm>
+    <div>
+        <label>username: </label>
+        <input type="text" name="nameUser" [(ngModel)]="userDetails.username" required>
+    </div>
+    <div>
+        <label>password:</label>
+        <input type="password" name="passwordUser" [(ngModel)]="userDetails.password" required>
+    </div>
+    <br>
+    <button opacity class="btn" type="submit" (click)="toEnter()">log-in</button>
+    </form>
+</div>
+

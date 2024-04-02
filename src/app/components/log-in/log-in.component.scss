@@ -1,0 +1,25 @@
+.body{
+    padding: 3%;
+    background-color: rgb(248, 224, 231);
+    text-align: center;  
+    font-size: large;
+}
+
+.btn{
+    background-color: rgb(5, 5, 5);
+    margin-left: 10%;
+    color: rgb(192 142 156);
+    width: 7%;
+    padding: 0.3%;
+    margin-right: 7%;
+    font-size: large;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid rgb(6, 6, 6);
+    box-sizing: border-box;
+    width: 10%;
+    background: none;
+}
