@@ -36,4 +36,14 @@ export class UserService {
     public get Jobs() {
         return this.jobs
     }
+
+    public filterDomain(fil:any): Job[] {
+        let f=this.jobs.filter(x => ((x["domain"]) === (fil)))
+        return f;
+    }
+
+    public filterLocation(fil:any): Job[] {
+        let f=this.jobs.filter(x => ((x["location"]) === (fil)))
+        return f;
+    }
 }

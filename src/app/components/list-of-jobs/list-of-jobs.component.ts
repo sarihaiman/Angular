@@ -32,7 +32,7 @@ export class ListOfJobsComponent implements OnInit {
   filterDetails: any = null
   filterChange($event: any) {
     this.filterDetails = $event
-    this.jobs = this.jobs.filter(x => ((x["domain"]) === (this.filterDetails)));
+    this.jobs = this.JobsSvc.filterDomain(this.filterDetails);
   }
 
   filterDetails2: any = null
@@ -42,11 +42,11 @@ export class ListOfJobsComponent implements OnInit {
     else {
       if ($event["nameDomain"][0] != undefined) {
         this.filterDetails2 = $event["nameDomain"];
-        this.jobs = this.jobs.filter(x => ((x["domain"]) === (this.filterDetails2)));
+        this.jobs = this.JobsSvc.filterDomain(this.filterDetails2);
       }
       else {
         this.filterDetails2 = $event["nameLocation"];
-        this.jobs = this.jobs.filter(x => ((x["location"]) === (this.filterDetails2)));
+        this.jobs = this.JobsSvc.filterLocation(this.filterDetails2);
       }
     }
   }
